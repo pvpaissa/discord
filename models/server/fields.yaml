@@ -1,0 +1,20 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: Server
+        span: left
+        placeholder: Server Name
+
+    description:
+        label: Server Description
+        type: textarea
+        size: large
+
+    url:
+        label: Invite URL
+        span: left
+        placeholder: Permalink

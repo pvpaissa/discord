@@ -1,0 +1,41 @@
+<div class="basic-page twitch-page">
+    <div class="container">
+        <div class="page-title">
+            <h1>Discord Servers</h1>
+            <div class="sub-box"></div>
+        </div>
+
+        <p class="text-white lead">
+            <a href="https://discordapp.com/"
+               title="Download Discord" target="_blank">Discord</a> has become a great tool for communicating with the
+            community. Pick one or more communities from our list below.
+        </p>
+
+        <div class="container basic-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    {% for server in servers %}
+                    <div class="discord-server pb-3">
+                        <h3 class="card-title">{{ server.name }}</h3>
+                        <p class="card-text">{{ server.description }}</p>
+                        <a class="btn btn-outline-primary" href="{{ server.url }}">Join Server</a>
+                        <hr>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="col-lg-4 side-bar">
+                    <h4>List Your Server</h4>
+                    <div class="sub-box mb-4"></div>
+                    <a class="btn btn-block btn-outline-primary" href="/request/discord">
+                        Request to be added to the list.
+                    </a>
+
+                    <a class="btn btn-block btn-outline-danger" href="/report/discord">
+                        If there are any broken links, please let us.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

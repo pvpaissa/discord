@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Event
+form: ~/plugins/cleanse/discord/models/server/fields.yaml
+modelClass: Cleanse\Discord\Models\Server
+defaultRedirect: cleanse/discord/servers
+
+create:
+    redirect: cleanse/discord/servers/update/:id
+    redirectClose: cleanse/discord/servers
+
+update:
+    redirect: cleanse/discord/servers
+    redirectClose: cleanse/discord/servers
